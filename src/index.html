@@ -6,16 +6,340 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/reset.css" type="text/css">
     <link rel="stylesheet" href="/styles.css">
-    <title>Document</title>
+    <title>Forms</title>
 </head>
 <body>
-    <h1>
-        Hello World
-    </h1>
-    <img src="/assets/images/cat.jpeg" alt="" width="300">
+    <section class="login__page">
+            <form class="login__form" action=""> 
+                <div class="text__input">
+                    <label class="text__box">
+                        Username
+                        <input 
+                            type="text"
+                            placeholder="Enter your username"
+                            required
+                            class="input-box"
+                        >    
+                    </label>
+                    <label class="text__box">
+                        Password
+                        <input 
+                            type="password"
+                            placeholder="Enter your password"
+                            required
+                            class="input-box"
+                        >    
+                    </label>
+                    <label class="checkbox__switch">
+                        <input type="checkbox" id="toggle" class="checkbox" />
+                        <label for="toggle" class="switch"></label>
+                        Remember me
+                    </label>
+                </div>
+                <button 
+                    type="submit"
+                    class="button"
+                >
+                    Sign In
+                </button>
+                <a class="link__text" href="#">
+                    Forgot your password?
+                </a>
+                <div class="divider__line"></div>
+                <div class="continue-with__box">
+                    <span class="text__body">
+                        or continue with
+                    </span>
+                    <div class="continue-with__buttons">
+                        <button class="sign-in__button">
+                            <a href="#">
+                                <img src="assets/images/google (1) 1.png" alt="google">
+                            </a>
+                        </button>
+                        <button class="sign-in__button">
+                            <a href="#">
+                                <img src="assets/images/image 1.png" alt="facebook">
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </form>
+    </section>
+    <section class="contact-us__page-one">
+        <form class="login__form contact-us__form-one" action="">
+            <h2 class="text__heading-1">
+                Contact Us
+            </h2>
+            <div class="text__input">
+                <div class="contact-us__input-box">
+                    <label class="text__box">
+                        First Name
+                            <input 
+                                type="text"
+                                placeholder="Enter your name"
+                                required
+                                class="input-box"
+                            >   
+                    </label>
+                    <label class="text__box">
+                        Last Name
+                            <input 
+                                type="text"
+                                placeholder="Enter your last name"
+                                required
+                                class="input-box"
+                            >   
+                    </label>
+                </div>
+                <div class="contact-us__input-box">
+                    <label class="text__box">
+                        E-mail
+                            <input 
+                                type="email"
+                                placeholder="Enter your e-mail"
+                                required
+                                class="input-box"
+                            >   
+                    </label>
+                    <label class="text__box">
+                        Contacting reason
+                            <select 
+                                
+                                required
+                                class="input-box"
+                            >
+                                <option disabled selected value="reason1">
+                                    Please select a reason
+                                </option>
+                                <option value="reason1">
+                                    Reason1
+                                </option>
+                                <option value="reason2">
+                                    Reason2
+                                </option>
+                                <option value="reason3">
+                                    Reason3
+                                </option>
+                                <option value="reason4">
+                                    Reason4
+                                </option>
+                            </select>   
+                    </label>
+                </div>
+            </div>
+            <label class="checkbox__check__box">
+                <input type="checkbox" id="toggle" class="checkbox__check"/>
+                <label for="toggle"></label>
+                Subscribe to News
+            </label>
+            <label class="contact-us__message_box">
+                <h4 class="text__heading-2">
+                    Message
+                </h4>
+                    <textarea 
+                        placeholder="Type your message"
+                        class="contact-us__message"
+                    ></textarea>  
+            </label>
+            <button class="submit__button">
+                Submit
+            </button>
+        </form>
+    </section>
+    <section class="contact-us__page-two">
+        <div class="contact-us__form-two">
+            <div class="contact-us__info-box">
+                <span class="text__body-2">
+                    Contact Information
+                </span>
+                <span class="text__body-2">
+                    Here's some additional support text to help set user expectations. 
+                </span>
+                <div class="info-box__phone-mail-box">
+                    <div class="info__item-box">
+                        <img src="assets/images/Phone.svg" alt="phone">
+                        <span class="text__body-2">
+                            123-456-7890
+                        </span>
+                    </div>
+                    <div class="info__item-box">
+                        <img src="assets/images/Mail.svg" alt="mail">
+                        <span class="text__body-2">
+                            support@minerva.com
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-us__text-box-two">
+                <h2 class="text__heading-1">
+                    Contact Us
+                </h2>
+                <div class="text__input">
+                    <div class="contact-us__input-box">
+                        <label class="text__box">
+                            First Name
+                                <input 
+                                    type="text"
+                                    placeholder="Enter your name"
+                                    required
+                                    class="input-box"
+                                >   
+                        </label>
+                        <label class="text__box">
+                            Last Name
+                                <input 
+                                    type="text"
+                                    placeholder="Enter your last name"
+                                    required
+                                    class="input-box"
+                                >   
+                        </label>
+                    </div>
+                    <div class="contact-us__input-box">
+                        <label class="text__box">
+                            E-mail
+                                <input 
+                                    type="email"
+                                    placeholder="Enter your e-mail"
+                                    required
+                                    class="input-box"
+                                >   
+                        </label>
+                        <label class="text__box">
+                            E-mail
+                                <input 
+                                    type="email"
+                                    placeholder="Enter your e-mail"
+                                    required
+                                    class="input-box"
+                                >   
+                        </label>
+                    </div>
+                </div>
+                <label class="text__box">
+                    E-mail
+                        <input 
+                            type="email"
+                            placeholder="Enter your e-mail"
+                            required
+                            class="input-box"
+                        >   
+                </label>
+                <label class="contact-us__message_box">
+                    <h4 class="text__box">
+                        Message
+                    </h4>
+                        <textarea 
+                            placeholder="Type your message"
+                            class="contact-us__message"
+                        ></textarea>  
+                </label>
+                <button class="submit__button">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="checkout__page">
+        <form class="checkout__form" action="">
+            <h4 class="text__heading-1">
+                Checkout
+            </h4>
+            <div class="checkout__order-delivery-box">
+                <div class="checkout__order-box">
+                    <h5 class="text__heading-3">
+                        Your Order
+                    </h5>
+                    <div class="order__info-box">
+                        <div class="blank__space">
 
-
-    <script src="/scripts.js"></script>
+                        </div>
+                        <div class="info__text-box">
+                            <span class="text__box">
+                                Eggshell Plant Pot
+                            </span>
+                            <span class="text__box">
+                                Size: Medium
+                            </span>
+                            <span class="text__box">
+                                Qty: 1
+                            </span>
+                            <span class="text__box">
+                                $25.00
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkout__delivery-box">
+                    <h5 class="text__heading-3">
+                        Delivery Details
+                    </h5>
+                    <div class="delivery__text-box">
+                        <div class="delivery__info-box">
+                            <span class="text__box">
+                                Adam Sandler
+                            </span>
+                            <span class="text__box">
+                                1234 Fake St
+                            </span>
+                            <span class="text__box">
+                                Milwaukee, WI 53203
+                            </span>
+                        </div>
+                        <div class="delivery__info-box">
+                            <span class="text__box">
+                                Shipping Speed
+                            </span>
+                            <span class="text__box">
+                                $7.00 No Rush Shipping
+                            </span>
+                            <span class="text__box">
+                                Arrives by 1/16/22
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="checkout__payment-box">
+                <h5 class="text__heading-3">
+                    Payment Method
+                </h5>
+                <div class="payment_text-box">
+                    <label class="text__box">
+                        Last Name
+                            <input 
+                                type="text"
+                                placeholder="Enter your last name"
+                                required
+                                class="input-box"
+                            >   
+                    </label>
+                    <label class="text__box">
+                        Last Name
+                            <input 
+                                type="text"
+                                placeholder="Enter your last name"
+                                required
+                                class="input-box"
+                            >   
+                    </label>
+                    <label class="text__box">
+                        Last Name
+                            <input 
+                                type="text"
+                                placeholder="Enter your last name"
+                                required
+                                class="input-box"
+                            >   
+                    </label>
+                </div>
+            </div>
+            <button class="submit__button">
+                Continue
+            </button>
+        </form>
+    </section>
 </body>
 </html>
