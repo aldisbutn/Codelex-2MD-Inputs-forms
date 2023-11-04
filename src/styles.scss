@@ -3,6 +3,7 @@
 body {
   margin: 0;
   font-family: 'Roboto Condensed';
+  background-color: var(--gray600);
 }
 
 :root {
@@ -16,6 +17,7 @@ body {
   --gray600: #FAFAFA;
   --main: #FD7918;
   --purple: #651FFF;
+  --darkform: #1F1B29;
 }
 
 .login__page, .contact-us__page-one, .contact-us__page-two, .checkout__page {
@@ -25,7 +27,7 @@ body {
   justify-content: center;
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: var(--gray600);
+  
 }
 
 .login__form, .contact-us__form-one, .contact-us__form-two, .checkout__form {
@@ -124,7 +126,7 @@ body {
   background-color: var(--gray10);
   top: 2px; // TO GIVE AN EFFECT OF CIRCLE INSIDE SWITCH.
   left: 2px;
-  transition: all 0.3s;
+  transition: 0.5s;
 }
 
 .checkbox:checked + .switch::after {
@@ -161,7 +163,7 @@ body {
 
 .button:hover {
   background-color: var(--darkPurple);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .link__text {
@@ -203,7 +205,7 @@ body {
 
 .sign-in__button:hover {
   background-color: var(--darkPurple);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .contact-us__form-one, .contact-us__form-two {
@@ -268,7 +270,7 @@ body {
 
 .submit__button:hover {
   background-color: var(--darkPurple);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .contact-us__form-two {
@@ -403,5 +405,9 @@ body {
 }
 
 .dark-mode {
-  background-color:var(--darkPurple)
+  background-color:var(--darkPurple);
+}
+
+.dark-mode__form {
+  background-color: var(--darkform);
 }
