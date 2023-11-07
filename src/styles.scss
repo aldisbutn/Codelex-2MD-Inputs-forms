@@ -3,21 +3,32 @@
 body {
   margin: 0;
   font-family: 'Roboto Condensed';
-  background-color: var(--gray600);
+  background-color: var(--c-bg)
 }
 
 :root {
-  --darkPurple: #130F1C;
-  --gray10: #FFFFFF;
-  --gray100: #99969E;
-  --gray200: #BAB9BD;
-  --gray25: #2E2A36;
-  --gray400: #ECECEE;
-  --gray50: #5A5761;
-  --gray600: #FAFAFA;
-  --main: #FD7918;
-  --purple: #651FFF;
-  --darkform: #1F1B29;
+  --c-purple: #651FFF;
+  --c-orange: #FD7918;
+}
+
+[data-theme="light"] {
+  --c-bg: #FAFAFA;
+  --c-bgform: #FFF;
+  --c-headertext: #130F1C;
+  --c-bodytext: #BAB9BD;
+  --c-inputtext: #18273A;
+  --c-subtext: #484848;
+  --c-buttontext: #FFFFFF;
+}
+
+[data-theme="dark"] {
+  --c-bg: #130F1C;
+  --c-bgform: #1F1B29;
+  --c-headertext: #BAB9BD;
+  --c-bodytext: #99969E;
+  --c-inputtext: #99969E;
+  --c-subtext: #BAB9BD;
+  --c-buttontext: #FFFFFF;
 }
 
 .login__page, .contact-us__page-one, .contact-us__page-two, .checkout__page {
@@ -40,7 +51,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--gray10);
+  background-color: var(--c-bgform);
   box-shadow: 40px 40px 60px 0px rgba(0, 0, 0, 0.10);
   
 }
@@ -57,7 +68,7 @@ body {
   width: 100%;
   font-size: 16px;
   font-weight: 400;
-  color: var(--darkPurple);
+  color: var(--c-headertext);
   gap: 4px;
   display: flex;
   flex-direction: column;
@@ -66,35 +77,35 @@ body {
 .text__body {
   font-size: 16px;
   font-weight: 400;
-  color: var(--gray50);
+  color: var(--c-subtext);
   margin: 0;
 }
 
 .text__body-2 {
   font-size: 16px;
   font-weight: 400;
-  color: var(--gray10);
+  color: var(--c-bodytext);
   margin: 0;
 }
 
 .text__heading-1 {
   font-size: 32px;
   font-weight: 500;
-  color: var(--darkPurple);
+  color: var(--c-headertext);
   margin: 0;
 }
 
 .text__heading-2 {
   font-size: 12px;
   font-weight: 400;
-  color: var(--darkPurple);
+  color: var(--c-headertext);
   margin: 0;
 }
 
 .text__heading-3 {
   font-size: 20px;
   font-weight: 400;
-  color: var(--darkPurple);
+  color: var(--c-headertext);
   margin: 0;
 }
 
@@ -102,7 +113,7 @@ body {
 .checkbox__switch {
   font-size: 16px;
   font-weight: 400;
-  color: var(--gray50);
+  color: var(--c-subtext);
   gap: 8px;
   display: flex;
   align-items: center;
@@ -113,7 +124,7 @@ body {
   display : inline-block;
   width : 28px;
   height : 16px;
-  background-color: var(--gray10);
+  background-color: var(--c-bodytext);
   border-radius: 20px;
 }
 
@@ -123,7 +134,7 @@ body {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: var(--gray10);
+  background-color: var(--c-bgform);
   top: 2px; // TO GIVE AN EFFECT OF CIRCLE INSIDE SWITCH.
   left: 2px;
   transition: 0.5s;
@@ -133,7 +144,7 @@ body {
   left : 14px; 
 }
 .checkbox:checked + .switch {
-  background-color: var(--main);
+  background-color: var(--c-orange);
 }
 
 .checkbox { 
@@ -147,7 +158,7 @@ body {
   padding: 12px 14px 12px 12px;
   border-radius: 5px;
   border: 0;
-  background: var(--gray600);
+  background: var(--c-bg);
   align-self: stretch;
 }
 
@@ -156,18 +167,18 @@ body {
   border-radius: 5px;
   border: 0;
   padding: 12px 48px;
-  background-color: var(--purple);
-  color: var(--gray10);
+  background-color: var(--c-purple);
+  color: var(--c-buttontext);
   font-size: 16px;
 }
 
 .button:hover {
-  background-color: var(--darkPurple);
+  background-color: var(--c-headertext);
   transition: 0.5s;
 }
 
 .link__text {
-  color: var(--purple);
+  color: var(--c-purple);
   font-size: 16px;
 }
 
@@ -175,7 +186,7 @@ body {
   width: 100%;
   height: 2px;
   border-radius: 10px;
-  background: var(--gray400);
+  background: var(--c-bodytext);
 }
 
 .continue-with__box {
@@ -197,15 +208,22 @@ body {
   width: 100%;
   border-radius: 5px;
   padding: 12px 48px;
-  border: 1px solid var(--gray400);
-  background-color: var(--gray10);
+  border: 1px solid var(--c-headertext);
+  background-color: var(--c-bg);
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .sign-in__button:hover {
-  background-color: var(--darkPurple);
+  background-color: var(--c-headertext);
+  color: var(--c-bgform);
   transition: 0.5s;
+}
+
+.sign-in__button:hover ~ .sign-in__button--image {
+  transition: 0.1s;
+  filter: invert(100%) sepia(2%) saturate(9%) hue-rotate(354deg) brightness(101%) contrast(101%);
 }
 
 .contact-us__form-one, .contact-us__form-two {
@@ -225,7 +243,7 @@ body {
   gap: 8px;
   font-size: 14px;
   font-weight: 400;
-  color: var(--gray50);
+  color: var(--c-headertext);
 }
 
 .checkbox__check {
@@ -233,14 +251,13 @@ body {
 }
 
 .checkbox__check:checked {
-  accent-color: var(--main);
-  color: var(--gray10);
+  accent-color: var(--c-orange);
+  color: var(--c-bgform);
 }
 
 .contact-us__message_box {
   width: 100%;
   height: 100%;
-
   gap: 4px;
   display: flex;
   flex-direction: column;
@@ -253,7 +270,7 @@ body {
   padding: 8px 14px 8px 12px;
   border-radius: 5px;
   border: 0;
-  background: var(--gray600);
+  background: var(--c-bg);
 }
 
 .submit__button {
@@ -263,13 +280,13 @@ body {
   align-self: flex-end;
   border-radius: 5px;
   border: 0;
-  background: var(--purple);
-  color: var(--gray10);
+  background: var(--c-purple);
+  color: var(--c-buttontext);
   font-size: 16px;
 }
 
 .submit__button:hover {
-  background-color: var(--darkPurple);
+  background-color: var(--c-headertext);
   transition: 0.5s;
 }
 
@@ -294,7 +311,7 @@ body {
   align-items: flex-start;
   gap: 32px;
   border-radius: 10px 0px 0px 10px;
-  background: var(--purple);
+  background: var(--c-purple);
 }
 
 .info-box__phone-mail-box {
@@ -334,7 +351,7 @@ body {
   gap: 32px;
   display: flex;
   border-radius: 10px;
-  background: var(--gray10);
+  background: var(--c-bgform);
   box-shadow: 40px 40px 60px 0px rgba(0, 0, 0, 0.10);
 }
 
@@ -402,12 +419,4 @@ body {
   align-items: flex-start;
   gap: 8px;
   align-self: stretch;
-}
-
-.dark-mode {
-  background-color:var(--darkPurple);
-}
-
-.dark-mode__form {
-  background-color: var(--darkform);
 }
